@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GuideView">
+        <attr name="guideShadowColor" format="color"/>
+        <attr name="startWithFirstView" format="boolean"/>
+        <attr name="lightShape" format="enum">
+            <enum name="fit" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="rectangle_rounded" value="2"/>
+            <enum name="oval" value="3"/>
+        </attr>
+
+
+    </declare-styleable>
+
+</resources>
