@@ -128,7 +128,9 @@ binding.guideView.setTargetViews(
 만약 아래와 같이 세팅한다면 설명 뷰는 대상 뷰의 위에 위치하며, 50정도로 떨어져 있고, 설명 뷰의 0.1 지점이 대상 뷰의 0.5지점에 위치하게 됩니다.
 
 <br/>
+
 ```kotlin
+
 val firstDescriptionView=GuideDescriptionView.Builder(someCustomView)
     .setDescriptionPosition(DescriptionPosition.POSITION_TOP)
     .setViewMargin(50.0f)
