@@ -16,6 +16,7 @@ import androidx.core.animation.doOnEnd
 class GuideView : ConstraintLayout {
 
 
+    private var isEnd=false;
     private var targetViews: Array<View> = arrayOf()
     private var targetPadding = arrayOf<Int>()
     private var lightShape: GuideLightShape = GuideLightShape.SHAPE_FIT
@@ -214,13 +215,31 @@ class GuideView : ConstraintLayout {
     }
 
 
+//    fun prev(){
+//        if(isEnd)
+//            return
+//        if(targetIndex<=0)
+//            return
+//
+//        targetIndex-=1
+//
+//        if(targetIndex+1<descriptionViews.size){
+//            removeView(descriptionViews[targetIndex+1].view)
+//        }
+//
+//
+//    }
+
     fun next() {
         Log.e("test", "next")
+        if(isEnd)
+            return
         targetIndex += 1
 
         if (targetIndex > targetViews.size)
             return
 
+        //이전 설명 뷰 삭제
         if (targetIndex - 1 >= 0 && descriptionViews.size > targetIndex - 1)
             removeView(descriptionViews[targetIndex - 1].view)
 
@@ -228,10 +247,11 @@ class GuideView : ConstraintLayout {
         //끝났으면
         if (targetIndex >= targetViews.size) {
             this.removeView(this.shadowView)
-            if (targetIndex - 1 < descriptionViews.size)
+            if (targetIndex - 1 < descriptionViews.size && targetIndex-1>=0)
                 this.removeView(descriptionViews[targetIndex - 1].view)
             if (this.childCount == 0)
                 ((this.parent) as ViewGroup?)?.removeView(this)
+            isEnd=true
             return
         }
 

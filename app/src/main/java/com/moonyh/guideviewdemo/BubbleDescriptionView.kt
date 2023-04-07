@@ -25,7 +25,7 @@ class BubbleDescriptionView:CardView {
         this.radius=convertDpToPx(15).toFloat()
 
         binding.nextButton.setOnClickListener(onNextClicked)
-        binding.prevButton.setOnClickListener(onPrevClicked)
+        //binding.prevButton.setOnClickListener(onPrevClicked)
     }
 
 
@@ -35,14 +35,18 @@ class BubbleDescriptionView:CardView {
 
     }
 
-    fun setOnPrevClicked(onClicked:(View)->Unit){
-        this.onPrevClicked=onClicked
-        binding.prevButton.setOnClickListener(onPrevClicked)
-
-    }
+//    fun setOnPrevClicked(onClicked:(View)->Unit){
+//        this.onPrevClicked=onClicked
+//        binding.prevButton.setOnClickListener(onPrevClicked)
+//
+//    }
 
     fun setText(text:String){
         binding.text.text = text
+    }
+
+    fun setTextSize(sizeDp:Int){
+        binding.text.textSize=convertDpToPx(sizeDp).toFloat()
     }
 
 
