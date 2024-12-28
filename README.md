@@ -12,7 +12,7 @@
 
 <br/>
 
-![ezgif com-video-to-gif (3)](https://user-images.githubusercontent.com/53536205/230626220-67bc72a3-fbc0-4bc6-a2a6-cc42d54568ce.gif)
+<img src="https://user-images.githubusercontent.com/53536205/230626220-67bc72a3-fbc0-4bc6-a2a6-cc42d54568ce.gif" width="270" height="555"/>
 
 <br/>
 
